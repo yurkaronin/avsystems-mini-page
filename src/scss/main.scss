@@ -1,0 +1,220 @@
+@import "./variables";
+@import "./mixins";
+
+@import "./fonts";
+@import "./support";
+
+@import "./global";
+@import "./buttons/*.scss";
+@import "./blocks/**/*.scss";
+@import "./sections/**/*.scss";
+
+
+.header {
+  background-color: #fff;
+  color: #000000;
+  padding: 20px 0;
+  transition: 0.3s;
+
+  @media (max-width: 1070px) {
+    position: initial;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: 0.3s;
+
+    @media (max-width: 1070px) {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  .header__logo {
+    max-width: 320px;
+    display: block;
+    transition: 0.3s;
+
+    @media (max-width: 1070px) {
+      max-width: 240px;
+      transition: 0.3s;
+    }
+  }
+
+  .header__text {
+    max-width: 300px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    margin: 0;
+    line-height: 100%;
+    transform: translateY(0);
+    transition: 0.3s;
+
+    @media (max-width: 1070px) {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+    }
+  }
+
+  a {
+    color: #E95570;
+    font-weight: 700;
+  }
+}
+
+.hero {
+  background-image: url(../img/bg-1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: flex-end;
+  padding: 75px 0 35px;
+  position: relative;
+
+  @media (max-width: 1070px) {
+    margin: 0;
+    min-height: 470px;
+  }
+
+  @media (max-width: 770px) {
+    min-height: 333px;
+  }
+
+  .title {
+    color: #ffffff;
+    font-size: 64px;
+    line-height: 150%;
+    font-weight: 900;
+    margin: 0;
+    text-transform: uppercase;
+    z-index: 11;
+    position: relative;
+
+    @media (max-width: 1070px) {
+      max-width: 448px;
+    }
+
+    @media (max-width: 770px) {
+      font-size: 43px;
+    }
+  }
+}
+
+.bottle {
+  position: absolute;
+  right: 27%;
+  bottom: -33%;
+  transition: 0.3s;
+  max-width: 301px;
+
+  @media (max-width: 1070px) {
+    right: 2%;
+    bottom: -42%;
+    width: 270px;
+
+  }
+
+  @media (max-width: 1800px) {
+    right: 15%;
+
+  }
+
+  @media (max-width: 1400px) {
+    right: 2%;
+    bottom: -35%;
+
+  }
+
+  @media (max-width: 770px) {
+    max-width: 200px;
+  }
+}
+
+.promo-block {
+  width: 100%;
+  background-color: #fff;
+  padding: 43px 0;
+  margin-bottom: 30px;
+
+  @media (max-width: 770px) {
+    padding: 30px 0;
+  }
+}
+
+.slogan {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 120%;
+  max-width: 700px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 35px;
+  position: relative;
+  z-index: 11;
+
+
+  @media (max-width: 1070px) {
+    max-width: 650px;
+    font-size: 47px;
+  }
+
+  @media (max-width: 770px) {
+    max-width: 353px;
+    font-size: 28px;
+  }
+
+  span {
+    font-weight: 900;
+    color: #00AA83;
+  }
+}
+
+.button {
+  color: #ffffff;
+  background-color: #E95570;
+  border-radius: 50px;
+  padding: 20px 80px;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 120%;
+  text-transform: uppercase;
+  border: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.button:hover,
+.bottle:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.header.sticky {
+  padding-top: 35px;
+
+  .header__text {
+    @media (max-width: 1070px) {
+      transform: translateY(-400px);
+      height: 0;
+      line-height: 0;
+      font-size: 0;
+      transition: 0.3s;
+    }
+
+  }
+
+  .wrapper {
+    @media (max-width: 1070px) {
+      gap: 5px;
+      transition: 0.3s;
+    }
+
+  }
+}
